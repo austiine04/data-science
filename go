@@ -1,5 +1,5 @@
 !#bin/bash
 
-docker-machine start pneuma
-eval "$(docker-machine env pneuma)"
-docker run -p 8888:8888 -v /Users/kaugust/GADataScience/SYD_DAT_4/project:/tmp/project data
+docker-machine start default
+eval "$(docker-machine env default)"
+docker run -v $(pwd):/home/ds/notebooks -p 8888:8888 dataquestio/python3-starter
